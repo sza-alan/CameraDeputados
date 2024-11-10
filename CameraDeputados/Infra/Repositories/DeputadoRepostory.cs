@@ -19,6 +19,13 @@ namespace CameraDeputados.Infra.Repositories
                 .ToListAsync();
         }
 
+        public async Task<Deputado?> ObterDeputadoComDespesaPorEstado(string uf, int idDeputado)
+        {
+            return await _context.Deputados
+                .Include(d => d.Despesas)
+                .FirstOrDefaultAsync(d => d.Id == idDeputado);
+        }
+
         public async Task CarregarBaseDeputado(List<Deputado> deputados)
         {
             await _context.Deputados.AddRangeAsync(deputados);

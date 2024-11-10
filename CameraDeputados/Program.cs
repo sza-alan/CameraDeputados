@@ -19,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("defaultConnection"), serverVersion));
 
 builder.Services.AddScoped<IDeputadoService, DeputadoService>();
+builder.Services.AddScoped<IDespesaRepository, DespesaRepository>();
 builder.Services.AddScoped<IDeputadoRepository, DeputadoRepostory>();
 builder.Services.AddScoped<ICarregarBaseService, CarregarBaseService>();
 

@@ -6,7 +6,7 @@
         {
             Nome = nome;
             Uf = uf;
-            Cpf = cpf;
+            CPF = cpf;
             Partido = partido;
         }
 
@@ -18,7 +18,7 @@
         public int Id { get; init; }
         public string Nome { get; set; }
         public string Uf { get; set; }
-        public string Cpf { get; set; }
+        public string CPF { get; set; }
 
         public string Partido { get; set; }
 
